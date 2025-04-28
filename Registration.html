@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CP App login page</title>
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="js/jquery-min.js" defer></script>
+    <script src="cordova.js" defer></script> 
+
+</head>
+
+<body>
+
+    <div class="container-fixed  p-0 m-0">
+        <div class="row g-0 p-0 m-0">
+            <div class="col-md-12">
+
+                <input type="hidden" id="current_hdn_stage" name="current_hdn_stage" value="">
+
+                <section class="section login-section " id="registration_section">
+                    <div class="bg-login animate__animated animate__fadeIn ">
+                        <img src="img/first-page/projectvideo.png" alt="Background Image" class="img-fluid"
+                            height="100%">
+                    </div>
+
+                    <!-- Registration Form -->
+                    <div class="registration_form">
+                        <div class="text-center mb-4">
+                            <h4>New Customer Registration</h4>
+                        </div>
+                        <div id="registration_form_div">
+
+                            <span class=" btnback backButton">back</span>
+                            <div class="form-group mb-3">
+                                <label for="registration_email">Email Id</label>
+                                <input type="text" id="registration_email" name="registration_email"
+                                    class="form-control mt-1 clsvalid" placeholder="Enter your Email ID" required>
+<p class="text-dark mt-3 small">Register Email Id as per attached/given in Booking form</p>
+                            </div>
+                            <span id="registration_email_error" class="error-message " style="display: none;">Enter a
+                                valid Email ID</span>
+                            <div class="form-group d-flex justify-content-between align-items-center mt-3">
+                                <button type="button" id="verify_email_btn" class="btn btn-login ms-auto w-auto">Check
+                                    Email</button>
+                            </div>
+                            <!-- Hidden until email is verified -->
+                            <div id="remaining_registration_fields" style="display: none;">
+                                <div class="form-group mb-3">
+                                    <label for="registration_mobile">Mobile</label>
+                                    <input type="text" maxlength=10-11 pattern="[0-9]*" inputmode=numeric
+                                        autocomplete=off data-validation=length data-validation-length=10-11
+                                        id="registration_mobile" name="registration_mobile"
+                                        class="form-control mt-1 clsvalid" placeholder="Enter your Mobile Number"
+                                        required>
+                                    <span id="registration_mobile_error" class="error-message"
+                                        style="display: none;">Enter a valid 10-digit Mobile Number</span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="registration_password">Password</label>
+                                    <input type="password" id="registration_password" name="registration_password"
+                                        class="form-control mt-1 clsvalid" placeholder="Enter your Password" required>
+                                    <span id="registration_password_error" class="error-message"
+                                        style="display: none;">Password must be 8-20 chars, include 1 uppercase, 1
+                                        lowercase, and 1 special character</span>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="registration_confirmpassword">Confirm Password</label>
+                                    <input type="password" id="registration_confirmpassword"
+                                        name="registration_confirmpassword" class="form-control clsvalid"
+                                        placeholder="Confirm Password" required>
+                                    <span id="registration_confirmpassword_error" class="error-message"
+                                        style="display: none;">Passwords do not match</span>
+                                </div>
+                                <!-- Terms Checkbox with Modal Link -->
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input clsvalid" type="checkbox" value=""
+                                        id="registration_terms_checkbox">
+                                    <label class="form-check-label" for="">
+                                        I agree to the <a href="#" id="open_terms_modal">Terms & Conditions »</a>
+                                    </label><br>
+                                    <span id="terms_error" class="error-message my-2" style="display: none;">You must
+                                        agree to the Terms & Conditions</span>
+                                </div>
+                                <span id="registration_sendotp_error" class="error-message " style="display: none;">Enter a
+                                    valid Email ID</span>
+                                <div class="form-group d-flex justify-content-between align-items-center">
+                                    <button type="button" id="registration_btn" class="btn btn-login ms-auto">Send
+                                        OTP</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- OTP Div -->
+                        <!-- OTP Div -->
+                        <div id="otp_registration_div" style="display: none;">
+                            <span class="userid_back btnback">back</span>
+                            <div class="form-group mb-3">
+                                <label for="otp_registration_email">Enter Email OTP</label>
+                                <input type="text" id="otp_registration_email" name="otp_registration_email"
+                                    class="form-control clsvalid" placeholder="Email OTP" required>
+                                <span id="otp_registration_email_error" class="error-message "
+                                    style="display: none;">Enter a valid Email OTP</span>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="otp_registration_mobile">Enter Mobile OTP</label>
+                                <input type="text" id="otp_registration_mobile" name="otp_registration_mobile"
+                                    class="form-control clsvalid" placeholder="Mobile OTP" required>
+                                <span id="otp_registration_mobile_error" class="error-message"
+                                    style="display: none;">Enter a valid Mobile OTP</span>
+                            </div>
+                            <span id="registration_submitotp_error" class="error-message " style="display: none;">Enter a
+                                valid Email ID</span>
+                            <div class="form-group d-flex justify-content-between align-items-center">
+                                <button type="submit" id="otp_registration_submit_btn"
+                                    class="btn btn-login">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div class="modal" id="terms_modal" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content p-3 rounded" style="background: #fff;">
+                <h5 class="modal-title">Terms & Conditions</h5>
+                <div class="modal-body" style="max-height: 300px; overflow-y: auto;">
+                    <p>Your terms and conditions go here...</p>
+                </div>
+                <div class="modal-footer mt-2 d-flex justify-content-end">
+                    <button class="btn  me-2" id="close_terms_modal"><span class="material-symbols-outlined">cancel
+                        </span></button>
+                    <button type="button" id="agree_terms_btn" class="btn btn-primary">I Agree</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+
+</html>

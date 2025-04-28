@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Arrows -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="cordova.js" defer></script> 
+
+</head>
+
+<body>
+
+
+
+
+
+  <section class="section home-page  referral_details_section " id="referral_section">
+    <div class="backbtn_heading_header">
+     <img src="img/icon/back-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="" >
+      <p class="firsthading">referral</p>
+    </div>
+
+    <div class="main-notification  mb-3">
+      <div class="secondsection_notification  mb-0 justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mainsection_details ">
+  <div class="main_sub_section">
+    <div class="hadingsection" id="myTab" role="tablist">
+    <img src="img/icon/info-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+    </div>
+    <div id="">
+      <div class="details_contant_card">
+        <div class="px-2">
+          <div class="flex_card text-center">
+            <div class="card_contant_details">
+              <div action="">
+                <div class="mb-3">
+                  <label for="referral_text_name" class="form-label">Name <span class="text-danger">*</span> </label>
+                  <input type="text" placeholder="Name" class="form-control clsvalid" id="referral_text_name" aria-describedby="namehelp">
+                  <div id="error_referralname" class="form-text error-message" style="display: none;">Enter Name</div>
+                </div>
+                <div class="mb-3">
+                  <label for="referral_text_phone" class="form-label">Phone No. <span class="text-danger">*</span> </label>
+                  <input type="text" placeholder="+91 99999 99999" class="form-control clsvalid" id="referral_text_phone" aria-describedby="namehelp">
+                  <div id="error_referralphone" class="form-text error-message" style="display: none;">Enter Name</div>
+                </div>                
+
+                <div class="mb-3">
+                  <label for="referral_text_email" class="form-label">Mail ID <span class="text-danger">*</span> </label>
+                  <input type="text" class="form-control clsvalid" placeholder="@example.com" id="referral_text_email" aria-describedby="namehelp">
+                  <div id="error_referralemail" class="form-text error-message" style="display: none;">Enter Name</div>
+                </div>    
+                <div class="mb-3">
+                  <label for="referral_text_email" class="form-label">Project </label>
+                  <input type="text" class="form-control " placeholder="@example.com" id="referral_text_project" aria-describedby="namehelp">
+                  <div id="error_referralemail" class="form-text error-message" style="display: none;">Enter Name</div>
+                </div>    
+                <span id="referral_success" class="error-message msg_success" style="display: none;">Enter OTP</span>         
+                 <button class="custom_btn mb-3 " id="viewallreferrals_btn"  >View all Referrals</button> 
+                <button class="main_custom_btn navBtn" id="submit_btn_referral">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </section>
+  
+  <div class="footer_menu"></div>
+  <div id="offconvas_menu"></div>
+
+
+
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/jquery-min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js" defer></script>
+    <script src="js/referral.js" defer></script>
+</body>
+
+</html>

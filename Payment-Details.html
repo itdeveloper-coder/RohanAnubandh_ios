@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+<script src="cordova.js" defer></script>    <!-- Required for Cordova Plugins -->
+</head>
+
+<body>
+  <section class="section home-page  PaymentDetailssection " id="Payment_Details_section">
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png" loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading">Payment & Receipts</p>
+    </div>
+
+    <div class="main-notification mt-md-5 mb-4">
+      <div class="secondsection_notification  mb-0 justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+
+    </div>
+  
+    <div class="mainsection_details">
+      <div class="hadingsection" id="myTab" role="tablist">
+
+
+        <a class="nav-link active" id="milestones_tab" data-bs-toggle="tab" data-bs-target="#milestones_tab_pane" type="button"
+          role="tab" aria-controls="milestones-tab-pane" aria-selected="true">Milestones</a>
+
+
+        <a class="nav-link" id="receipts_tab" data-bs-toggle="tab" data-bs-target="#receipts_tab_pane" type="button"
+          role="tab" aria-controls="Receipts-tab-pane" aria-selected="false">Receipts</a>
+
+      </div>
+      <div id="">
+        <div class="details_contant_card">
+          <div class="tab-content" id="">
+            <div class="tab-pane fade show active" id="milestones_tab_pane" role="tabpanel" aria-labelledby="milestones_tab"
+              tabindex="0">
+              <div class="tdspay mb-3 tdspay_demand_letter" id="pay_demand_letter">
+                <img src="img/icon/donload-icon.png" loading="lazy" alt="File Icon"> <span class="">Download Demand
+                  Letter</span>
+                  <P id="dounloaddemanderror" class="error-message pt-2 small" style="display: none;">....</P>
+              </div>
+              <div class="tdspay totalamount">
+                <div class="row " id="taxes_other_charges">
+                  <div class="col-6">
+                    <p class="text-primary mb-2">Total Amount</p>
+                    <h5 class="mb-2 spinner-border spinner-border-sm"></h5>
+                    <small class="text-muted"></small>
+                    <p class="text-primary mt-4">Due Amount</p>
+                    <h5 class="mb-2 spinner-border spinner-border-sm"></h5>
+                    <small class="text-muted"></small>
+                  </div>
+                  <div class="col-6">
+                    <p class="text-primary mb-2">Received&nbsp;Amount</p>
+                    <h5 class="mb-2 spinner-border spinner-border-sm"></h5>
+                    <small class="text-muted"></small>
+                    <p class="text-primary mt-4">Balance Amount</p>
+                    <h5 class="mb-2 spinner-border spinner-border-sm"></h5>
+
+                  </div>
+                </div>
+                <small class="text-muted pt-3"> * Amounts includes taxes and other charges </small>
+              </div>
+              <!-- <div class="tdspay mt-3">
+                <p>Receipts</p>
+                <button class="custom_btn my-3"><img src="img/icon/donload-icon.png"loading="lazy" alt="File Icon">
+                  Download</button>
+                <button class="custom_btn my-3"> View all receipts</button>
+              </div>  -->
+              <!-- <div class="tdspay mt-3">
+                <p class="text-muted mb-3">Payment Method</p>
+
+                <div class="payment_method">
+                  <small class="text-muted">Current Method</small>
+                  <h5>Bank Account</h5>
+                  <p>Account: 123456789 - Example Bank</p>
+                </div>
+
+                <button class="custom_btn my-3"> Change Payment Method</button>
+              </div> -->
+              <!-- <div class="tdspay mt-3 bg-primary text-white ">
+                <p class=" mb-3">Excavation & Footing Installment</p>
+                  <h5>₹ 10,86,918</h5>
+                  <small class="text-dark">Amount to be paid</small>
+                  <p>11 Oct 2023</p>
+                  <small class="text-dark" id="140_interest_free_day">140 Interest Free Days</small>
+
+                <button class="custom_btn my-3"> <img src="img/icon/insert-icon.png"loading="lazy" alt="File Icon"> Pay Now</button>
+              </div> -->
+
+              <!-- <div class="tdspay mt-3 ">
+                <p class="text-muted mb-3">TDS Payable</p>
+                  <h5>₹ 1,41,200</h5>
+                  <small class="text-dark">Amount to be paid</small>
+                  <p>11 Oct 2023</p>
+                  <small class="text-dark" >140 Interest Free Days</small>
+
+                <button class="custom_btn my-3"> <img src="img/icon/insert-icon.png"loading="lazy" alt="File Icon"> Pay Now</button>
+              </div> -->
+              <p class="milestones_list pt-2 ">agreement installment --</p>
+              <div class="milestones_list_div accordion" id="milestones_list_div">
+                <h5 class="mb-2 spinner-border spinner-border-sm"></h5>
+              </div>
+              <p class="milestones_list pt-3 "> OTHER CHARGES --</p>
+              <div class="milestones_list_div accordion" id="othercharges_list_div">
+                <h5 class="mb-2 spinner-border spinner-border-sm"></h5>
+              </div>
+
+            </div>
+
+
+            <div class="tab-pane fade" id="receipts_tab_pane" role="tabpanel" aria-labelledby="receipts_tab" tabindex="0">
+              <div style="display: none;" id="Receipt_Statement_table"></div>
+              <div class="tdspay mb-3 tdspay_demand_letter" id="Receipt_Statement_file">
+                <img src="img/icon/donload-icon.png" loading="lazy" alt="File Icon"> <span class="">Download Receipt Statement</span>
+                <P id="dounloadreceipterror" class="error-message pt-2 small" style="display: none;">....</P>
+              </div>
+
+              <div class="tdspay  mb-3  totalamount">
+                <div class="row" id="all_receipt_statement">
+                  <div class="col-6">
+                    <p class="text-primary mb-2">Total Amount</p>
+                    <h5 class="mb-2 spinner-border spinner-border-sm"></h5>
+                    <small class="text-muted"></small>
+                  </div>
+                </div>
+                <small class="text-muted pt-3"> * Lorem ipsum dolor sit, amet consectetur .  </small> 
+              </div>
+
+              <div class="" id="receiptsContainer">
+                <div class="receipts_div border p-3 mb-3 bg-white rounded">
+                  
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="text-primary">Token Amount</h5>
+
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-6">
+                      <h6>₹ 200,000</h6>
+                      <small>NET AMOUNT</small>
+                    </div>
+                    <div class="col-6 text-end">
+                      <h6>2019-05-10</h6>
+                      <small>DATE</small>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-6">
+                      <h6>Cheque </h6>
+                      <small>PAYMENT TYPE</small>
+                    </div>
+                    <div class="col-6 text-end">
+                      <h6>234</h6>
+                      <small>NO.</small>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-6">
+                      <h6>2019-05-10</h6>
+                      <small>CHEQUE DATE</small>
+                    </div>
+                    <div class="col-6 text-end">
+                      <h6>as</h6>
+                      <small>BANK NAME</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <div class="modal_taxes  taxesbg" id="taxesother_charges_modal">
+    <button class="close-btn" id="close_modal_taxesother_charges"><img src="img/icon/close-white-icon.png"
+        loading="lazy" alt="File Icon"></button>
+    <div class="modal-content ">
+      <div class="content_taxes_other_charges">
+        <h6>Agreement Considerations</h6>
+        <h4>₹ 80,00,000</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal_taxes taxesbg" id="interest_free_day_modal">
+    <button class="close-btn" id="close_modal_interest_free_day"><img src="img/icon/close-white-icon.png" loading="lazy"
+        alt="File Icon"></button>
+
+    <div class="modal-content ">
+      <div class="content_taxes_other_charges">
+        <h6>Agreement Considerations</h6>
+        <h4>₹ 80,00,000</h4>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer_menu"></div>
+  <div id="offconvas_menu"></div>
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/jquery-min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>  
+  <script src="js/common.js" defer></script>
+  <script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/Payment-Details.js" defer></script>
+</body>
+
+</html>

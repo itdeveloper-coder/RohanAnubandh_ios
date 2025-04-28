@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+
+  <script src="js/jquery-min.js" defer></script>
+  <!-- jQuery UI (for Datepicker) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
+
+  <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet" >
+  <link href="css/bootstrap.min.css"  rel="stylesheet" >
+  <link href="css/style.css"  rel="stylesheet">
+  <link href="css/main.css"  rel="stylesheet" >
+  <script src="cordova.js" defer></script> 
+  <!-- jQuery Library -->
+
+
+</head>
+
+<body>
+
+
+  <section class="section support-page  " id="support_firstsection">
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading">Service Request</p>
+
+    </div>
+    <div class="main-notification mt-md-5 mb-3">
+      <div class="secondsection_notification  mb-0 justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="main_supportdetails">
+      <div class="mainsection_details">
+        <div class="supportdetails_Applicant1  Ticket_Counthide sticky-top">
+          <div class="flex_card text-center">
+            <h5 class="fw-normal">Total Ticket : <b class="Ticket_Count"><span class="mb-2 spinner-border spinner-border-sm"></span></b></h5>
+            <button class="main_custom_btn addticket  navBtn Btnclick" data-section="support_form_section">Add New Ticket</button>
+          </div>
+        
+        </div>
+ 
+        <div class="supportdetails_Applicant Ticket_Bind_all pt-0">
+
+          <!-- <div class="flex_card text-center Btnclick" data-section="total_ticket_section">
+            <div class="card_contant_details">
+              <span> #CR2024001</span>
+              <h5>KYC</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+              <img src="img/first-page/akar-icons_schedule.png"loading="lazy" alt="File Icon" class="img-fluid me-2"><span>0-10-2024</span>
+              <div class="support-btn-group">
+                <button class="customsupportgrry-btn ">High</button>
+                <button class="customsupportgrren-btn ">Resolved</button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section support-page" id="support_form_section">
+
+
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-black-icon.png"  alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading text-dark">Service Request</p>
+
+    </div>
+    <div class="main_supportdetails">
+              <div class="card_contant_details p-4" >
+                  <div id="support_ticket_form">
+                     <!-- Category Field -->
+                    <div class="mb-3">
+                      <label  class="form-label">Category <span class="text-danger">*</span></label>
+                    <select class="form-select" aria-label="Default select example" id="support2_ddl_category">
+                    </select>
+                      <div id="errorcategory" class="form-text text-danger error-message" style="display: none;">Select category</div>
+                  </div>
+
+                  <!-- Description Field -->
+                <div class="mb-3">
+                  <label  class="form-label">Description <span class="text-danger">*</span></label>
+                  <textarea class="form-control clsvalid" id="support1_text_description" rows="4" placeholder="Enter Description" maxlength="200"></textarea>
+                  <div id="errordescription" class="form-text text-danger error-message" style="display: none;">Enter Description</div>
+              </div>
+
+              <!-- File Attachment -->
+              <div class="row g-0 mb-3">
+                <div class="col-6">
+                  <button type="button" class="btn btn-secondary w-100" id="attach_file_btn">
+                    <img src="img/icon/attachment-icon.png" loading="lazy" alt="File Icon"> Attach File
+                  </button>
+                  <input type="file" class="form-control mt-2 d-none" id="support1_file_preferredfile">
+                  <div id="file_name_display" class="mt-2"></div>
+                  <div id="errorfile" class="form-text text-danger error-message" style="display: none;">Select a file</div>
+                  <div id="errorallform" class="form-text" style="display: none;">Select a file</div>
+                </div>
+              </div>
+                      <button type="button" class="btn btn-primary" id="submit_btn_ticket">Submit Ticket</button>
+            </div>
+
+            </div>
+      </div>
+  </section>
+
+
+
+  <section class="section support-page" id="support_form_section">
+
+
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-black-icon.png"  alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading text-dark">Service Request</p>
+    </div>
+
+
+
+
+    <div class="main_supportdetails">
+              <div class="card_contant_details p-4" >
+                  <form id="support_ticket_form2">
+                  <!-- Description Field -->
+                <div class="mb-3">
+                  <label  class="form-label">Description <span class="text-danger">*</span></label>
+                  <textarea class="form-control clsvalid" id="support2_text_description" rows="4" placeholder="Enter Description" maxlength="200"></textarea>
+                  <div id="errordescription" class="form-text text-danger error-message" style="display: none;">Enter Description</div>
+              </div>
+
+              <!-- Preferred Date -->
+              <div class="mb-3">
+                  <label for="support2_text_preferreddate" class="form-label">Preferred Date <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control datepicker clsvalid" placeholder="YYYY-MM-DD" id="support2_text_preferreddate">
+                  <div id="errorpreferreddate" class="form-text text-danger error-message" style="display: none;">Enter Preferred Date</div>
+              </div>
+
+              <!-- Preferred Time Slot -->
+              <div class="timeslot mb-3">
+                  <label class="form-label">Preferred Time Slot <span class="text-danger">*</span></label><br>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="preferredtime" id="preferredtime_9_to_12" value="9 am to 12 pm">
+                      <label class="form-check-label" for="preferredtime_9_to_12">9 am to 12 pm</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="preferredtime" id="preferredtime_2_to_5" value="2 pm to 5 pm">
+                      <label class="form-check-label" for="preferredtime_2_to_5">2 pm to 5 pm</label>
+                  </div>
+                  <input type="hidden"  id="support2_hdn_preferredtime">
+                  <div id="errorpreferredtime" class="form-text text-danger error-message" style="display: none;">Select a Preferred Time Slot</div>
+              </div>
+
+              <!-- File Attachment -->
+              <div class="row g-0 mb-3">
+                <div class="col-6">
+                  <button type="button" class="btn btn-secondary w-100" id="attach_file_btn">
+                      <img src="img/icon/attachment-icon.png"loading="lazy" alt="File Icon"> Attach File
+                  </button>
+                  <input type="file" class="form-control mt-2 d-none" id="support2_file_preferredfile">
+                  <div id="file_name_display2" class="mt-2"></div>
+                  <div id="errorfile2" class="form-text text-danger error-message" style="display: none;">Select a file</div>
+              </div>
+              </div>
+                      <button type="button" class="btn btn-primary" id="submit_btn_ticket">Submit Ticket</button>
+            </div>
+      </div>
+
+
+
+    
+
+  </section>
+
+  <section class="section support-page  bg-white" id="total_ticket_section">
+
+
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-black-icon.png"loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading text-dark">Ticket Details</p>
+
+    </div>
+
+
+
+
+    <div class="main_supportdetails">
+        <div id="total_ticket" class="total_ticket">
+            <span class="mb-2 spinner-border spinner-border-sm"></span>
+
+        </div>
+        </div>
+    </div>
+
+
+
+  </section>
+
+  <div class="footer_menu"></div>
+  <div id="offconvas_menu"></div>
+
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js" defer></script>
+  <script src="js/support.js" defer></script>
+
+
+
+</body>
+
+</html>

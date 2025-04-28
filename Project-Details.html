@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet" >
+    <link href="css/bootstrap.min.css"  rel="stylesheet" >
+    <link href="css/style.css"  rel="stylesheet">
+    <link href="css/main.css"  rel="stylesheet" >
+    <script src="js/jquery-min.js" defer></script>
+    <script src="cordova.js" defer></script> 
+  </head>
+  <body>
+
+<div class="container-fixed  p-0 m-0">
+<div class="row g-0 p-0 m-0">
+    <div class="col-md-12">
+    <section class="section support-page " id="projectpage_mainsection">
+      <div class="backbtn_heading_header">
+        <img src="img/icon/back-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="" >
+        <p class="firsthading">Project detail</p>
+      </div>
+      <div class="main-notification mt-md-5">
+        <div class="secondsection_notification justify-content-start callschedule">
+          <div>
+            <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+          </div>
+          <div class="ms-3">
+            <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+            <p class="cpCRM_Mob_No">+91 99999 99999</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-notification">
+        <div class="project_name justify-content-start callschedule">
+          <div class="headercontant">
+            <span class="firsthading"><b id="projectname"><span class="mb-2 spinner-border spinner-border-sm"></span></b> <span id="projectaddress" class="d-none"><span class="mb-2 spinner-border spinner-border-sm"></span></span></span>
+            <p>Welcome to your dashboard</p>
+          </div>
+        </div>
+      </div>
+      <div class="mainsection_details">
+ 
+        <div class="card_mainsection_contant_details">
+          <div class="details_contant_card">
+  
+  
+            <div class="flex_card text-center projectpage_details_tab">
+              <div class="card_contant_details ">
+                <ul class="nav nav-tabs" id="projectpage_details_tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="details_tab" data-bs-toggle="tab" data-bs-target="#details_tab_pane" type="button" role="tab" aria-controls="details_tab_pane" aria-selected="true">DETAILS</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="location-tab" data-bs-toggle="tab" data-bs-target="#location-tab-pane" type="button" role="tab" aria-controls="location-tab-pane" aria-selected="false">LOCATION</button>
+                  </li>
+                  <!-- <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="amenities_tab" data-bs-toggle="tab" data-bs-target="#amenities_tab_pane" type="button" role="tab" aria-controls="amenities_tab_pane" aria-selected="false">AMENITIES</button>
+                  </li> -->
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="update_tab" data-bs-toggle="tab" data-bs-target="#update_tab_pane" type="button" role="tab" aria-controls="update_tab_pane" aria-selected="false" >CONSTRUCTION UPDATE</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="projectpage_details_tab_Content">
+                  <div class="tab-pane fade show active" id="details_tab_pane" role="tabpanel" aria-labelledby="details_tab" tabindex="0">
+                     <div class="row my-4 " id="unit_details">
+                      <div class="col-6">
+                        <h5 id="" class="projectflatno"><span class="mb-2 spinner-border spinner-border-sm"></span></h5>
+                        <small>Unit Number</small>
+                      </div>
+                      <div class="col-6 text-end">
+                        <h5 id="" class="projectunittype"><span class="mb-2 spinner-border spinner-border-sm"></span></h5>
+                        <small>Unit Type</small>
+                      </div> 
+                     </div> 
+                     <!-- <button class="detail-btn" ><img src="img/icon/balcony-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid"> 2 </button>
+                      <button class="detail-btn" ><img src="img/icon/bath-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid"> 2 </button>
+                      <button class="detail-btn" ><img src="img/icon/bad-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid"> 2 </button> -->
+                     <div class="row mt-4" id="unit_area">
+                       <div class="col-8">
+                        <h6>Carpet Area</h6>
+                        <h6>Enclosed Balcony</h6>
+                        <h6>Attached Terrace Area</h6>
+                        <h6>Floor</h6>
+                        <h6>Tower</h6>
+                      </div>
+                      <div class="col-4 text-end">
+                       <p><span class="mb-2 spinner-border spinner-border-sm"></span></p>
+                       <p><span class="mb-2 spinner-border spinner-border-sm"></span></p>
+                       <p><span class="mb-2 spinner-border spinner-border-sm"></span></p>
+                       <p><span class="mb-2 spinner-border spinner-border-sm"></span></p>
+                       <p><span class="mb-2 spinner-border spinner-border-sm"></span></p>
+                      </div> 
+                      </div>
+                  <!-- <div class="row">
+                    <div class="col-6 Btnclick" data-section="Brochure">
+                      <button class="custom_btn"  ><img src="img/icon/brochure-icon.png"loading="lazy" alt="File Icon" class="img-fluid"> View&nbsp;Brochure</button>
+                    </div>
+                    <div class="col-6 " onclick="shareAPK()">
+                      <button class="custom_btn "><img src="img/icon/share-icon.png"loading="lazy" alt="File Icon" class="img-fluid"> Share&nbsp;Details</button>
+                    </div>
+                     </div> -->
+                 
+                  </div>
+
+                  <div class="tab-pane fade" id="location-tab-pane" role="tabpanel" aria-labelledby="location-tab" tabindex="0">
+                    <br>
+                    <small class="">Map Location</small><br>
+                    <img src="img/home-page/location.png" loading="lazy" alt="File Icon"  class="img-fluid ">
+                    <small class="my-3">Address</small>
+                    <h6 class="address"><span class="mb-2 spinner-border spinner-border-sm"></span></h6>
+                  
+                  </div>
+
+                  <div class="tab-pane fade" id="amenities_tab_pane" role="tabpanel" aria-labelledby="amenities_tab" tabindex="0">
+                    <div class="row">
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/elicit-icon.png"loading="lazy" alt="File Icon" class="img-fluid">EV Station
+                        </div>
+                      </div>
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/tree-icon.png"loading="lazy" alt="File Icon" class="img-fluid">Gardens
+                        </div>
+                      </div>
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/p-icon.png"loading="lazy" alt="File Icon" class="img-fluid">Parking
+                        </div>
+                      </div>
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/home-lock-icon.png"loading="lazy" alt="File Icon" class="img-fluid">Security System
+                        </div>
+                      </div>
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/gym-icon.png"loading="lazy" alt="File Icon" class="img-fluid">Gym
+                        </div>
+                      </div>
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/swimming-icon.png"loading="lazy" alt="File Icon" class="img-fluid">Swimming Pool
+                        </div>
+                      </div>
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/plant-icon.png"loading="lazy" alt="File Icon" class="img-fluid">Club House
+                        </div>
+                      </div>
+                      <div class="col-6 ">
+                        <div class="amenities_sub_tab">
+                          <img src="img/icon/plant-icon.png"loading="lazy" alt="File Icon" class="img-fluid">Spa
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="update_tab_pane" role="tabpanel" aria-labelledby="update_tab" tabindex="0">
+                    
+                    <div class="row">
+                      <div class="col-12 " id="project_update">
+                        <div class="amenities_sub_tab text-center py-3">
+                          <img src="img/home-page/update-project.png"loading="lazy" alt="File Icon" class="img-fluid">
+                          <div class="flex_card text-center">
+                            <div class="card_iconsuccess mb-3" id="">
+                              <img src="img/icon/success-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+                            </div>
+                            <div class="card_contant_details ms-3">
+                              <h6>Tower 3 Slab 13 Completed</h6>
+                            <small>2023-19-11</small>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="amenities_sub_tab text-center">
+                          <div class="flex_card text-center">
+                            <div class="card_iconsuccess mb-3" id="">
+                              <img src="img/icon/success-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+                            </div>
+                            <div class="card_contant_details ms-3">
+                              <h6>Tower 3 Slab 13 Completed</h6>
+                            <small>2023-19-11</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="amenities_sub_tab text-center">
+                          <div class="flex_card text-center">
+                            <div class="card_iconsuccess mb-3" id="">
+                              <img src="img/icon/success-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+                            </div>
+                            <div class="card_contant_details ms-3">
+                              <h6>Tower 3 Slab 13 Completed</h6>
+                            <small>2023-19-11</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="amenities_sub_tab text-center">
+                          <div class="flex_card text-center">
+                            <div class="card_iconsuccess mb-3" id="">
+                              <img src="img/icon/success-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+                            </div>
+                            <div class="card_contant_details ms-3">
+                              <h6>Tower 3 Slab 13 Completed</h6>
+                            <small>2023-19-11</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+     
+  
+    </section>
+     
+       <!-- main section first home -->
+       <section class="section home-page  " id="Brochure">
+       
+        <div class="backbtn_heading_header">
+          <img src="img/icon/back-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="" >
+          <p class="firsthading">Brochure</p>
+        </div>
+        
+
+        <div class="main_supportdetails">
+   
+          <div class="supportdetails_Applicant" id="brochure_all">
+            <div class="flex_card text-center ">
+                  <img src="img/icon/project-icon-1.png"loading="lazy" alt="File Icon" class="img-fluid">
+               <h5>Masterplan</h5>
+              </div>
+              <div class="flex_card text-center ">
+                <img src="img/icon/image-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+             <h5>Photos</h5>
+            </div>
+            <div class="flex_card text-center ">
+              <img src="img/icon/floor-plan-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+           <h5>1 BHK Plan</h5>
+          </div>
+             <div class="flex_card text-center ">
+              <img src="img/icon/floor-plan-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+           <h5>Amenities</h5>
+          </div>
+          <div class="flex_card text-center ">
+            <img src="img/icon/floor-plan-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+         <h5>2 BHK Plan</h5>
+        </div>
+            </div>
+      </section>
+
+
+  </div>
+
+
+
+    </div>
+</div>
+</div>
+
+  <!-- Offcanvas Menu -->
+  <div class="footer_menu">
+  </div>
+
+  <div id="offconvas_menu"></div>
+
+<script src="js/bootstrap.bundle.min.js" defer></script>
+<script src="js/jquery-min.js" defer></script>
+<script src="js/script.js" defer></script>
+<script src="js/common.js" defer></script>
+<script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js" defer></script>
+<script src="js/project-details.js" defer></script>
+  </body>
+</html>

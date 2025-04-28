@@ -1,0 +1,186 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet" >
+  <link href="css/bootstrap.min.css"  rel="stylesheet" >
+  <link href="css/style.css"  rel="stylesheet">
+  <link href="css/main.css"  rel="stylesheet" >
+  <script src="js/jquery-min.js" defer></script>
+  <script src="cordova.js" defer></script> 
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.card-img {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.card-img img {
+    position: absolute;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    line-height: 1.33;
+    font-weight: 700;
+}
+.card-title.skeleton {
+    min-height: 28px;
+    border-radius: 4px;
+}
+
+.card-intro {
+    margin-top: 0.75rem;
+    line-height: 1.5;
+}
+.card-intro.skeleton {
+    min-height: 72px;
+    border-radius: 4px;
+}
+
+.skeleton {
+    background-color: #e2e5e7;
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    -webkit-animation: shine 1s ease infinite;
+    animation: shine 1s ease infinite;
+}
+
+@-webkit-keyframes shine {
+    to {
+        background-position: right -40px top 0;
+    }
+}
+
+@keyframes shine {
+    to {
+        background-position: right -40px top 0;
+    }
+}
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 4px;
+}
+
+.card-btn.skeleton {
+    min-height: 44px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img img {
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    height: 44px;
+    border: none;
+    border-radius: 4px;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(171, 102, 255, 1) 0%, rgba(116, 182, 247, 1) 90%);
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+  <section>
+    
+    <div class="container">
+      <div class="card">
+          <div class="card-img skeleton"></div>
+          <div class="card-body">
+              <h2 class="card-title skeleton"></h2>
+              <p class="card-intro skeleton"></p>
+              <div class="button-container">
+                  <button class="card-btn skeleton"></button>
+                  <button class="card-btn skeleton"></button>
+              </div>
+          </div>
+      </div>
+      <div class="card">
+          <div class="card-img">
+              <img src="" />
+          </div>
+          <div class="card-body">
+              <h2 class="card-title">
+                  Civil War (2016)
+              </h2>
+              <p class="card-intro">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, veritatis!
+              </p>
+              <div class="button-container">
+                  <button class="btn">Read More</button>
+                  <button class="btn">Download</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </section>
+
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/jquery-min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js" defer></script>
+  <script src="js/video.js" defer></script>
+</body>
+
+</html>

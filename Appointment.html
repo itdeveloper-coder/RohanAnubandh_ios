@@ -1,0 +1,113 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Appointment page</title>
+  <link rel="stylesheet" href="css/animate.min.css" rel="stylesheet" >
+  <link href="css/bootstrap.min.css"  rel="stylesheet" >
+  <link href="css/style.css"  rel="stylesheet">
+  <link href="css/main.css"  rel="stylesheet" >
+  <script src="js/jquery-min.js" defer></script>
+  <script src="cordova.js" defer></script> 
+
+  <style>
+    .form-check-inline{
+     margin-right: .5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- main section first home -->
+  <section class="section support-page  " id="support_Schedule_a_Cal_firstsection">
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png"loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading">Appointment</p>
+    </div>
+    <div class="main-notification">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png"loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+    </div>
+    <div class="mainsection_details">
+
+      <div class="card_mainsection_contant_details">
+        <div class="details_contant_card">
+          <div class="flex_card text-center">
+            <div class="flex_card text-center">
+              <div class="card_contant_details ">
+                <div class="d-flex">
+                  <span class="material-symbols-outlined me-2">info</span>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et</p>
+                </div>
+                <div class="card_contant_details">
+                  <div class="text-center">
+                    <label class="form-label Preferredtimeslot ">Select your preferred date</label><br>
+                  </div>
+                  <div class="dates">
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  </div>
+                  <div class="timeslot  py-3">
+                    <div class="text-center">
+                      <label class="form-label Preferredtimeslot ">Preferred Time slot</label><br>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input p-0" type="radio" name="timeslotRadio" id="time_9_to_12"
+                        value="9 am to 12 pm">
+                      <label class="form-check-label" for="time_9_to_12">9 am to 12 pm</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input p-0" type="radio" name="timeslotRadio" id="time_2_to_5"
+                        value="2 pm to 5 pm">
+                      <label class="form-check-label" for="time_2_to_5">2 pm to 5 pm</label>
+                    </div>
+                  </div>
+                  <div class="reason mb-2">
+                    <label for="reason_text_meeting" class="form-label">Reason of Meeting</label>
+                    <input type="text" class="form-control" id="reason_text_meeting" placeholder="Enter Reason of Meeting">
+                   
+                  </div>
+                  <div class="error-message" id="appoinment_error" style="display: none;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="main_custom_btn navBtn" id="selectdate_appointment_forcall">Book an Appointment</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Offcanvas Menu -->
+  <div class="footer_menu">
+  </div>
+  <div id="offconvas_menu"></div>
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js" defer></script>
+  <script src="js/appointment.js" defer></script>
+</body>
+
+</html>

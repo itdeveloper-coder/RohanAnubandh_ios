@@ -1,0 +1,851 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/jquery-min.js" defer></script>
+  <script src="cordova.js" defer></script> 
+</head>
+
+<body>
+
+  <!-- main section first home -->
+  <section class="section home-page" id="home_firstsection">
+    <div class="headercontant">
+      <span class="firsthading"><b id="projectname"> <span class="mb-2 spinner-border spinner-border-sm"></span></b>
+        <span id="projectaddress" class="d-none"></span></span>
+      <!-- <div class="mt-4"><span class="projectflatno "> <span class="mb-2 spinner-border spinner-border-sm"></span>
+        </span>,
+        <span class="projectunittype"> <span class="mb-2 spinner-border spinner-border-sm"></span> </span>
+      </div> -->
+    </div>
+    <div class="mainsectiondetails" >
+    <div class="main_notification_home">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/iconamoon_profile-thin.svg" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+    </div>
+    <div id="homepage_kyc">
+      
+      <div class="flex_card text-center">
+        <div class="card_icon mb-3">
+          <img src="img/icon/muliple-file-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="card_contant_details">
+          <h6>Step 1</h6>
+          <h5>KYC Documents Upload</h5>
+          <div  id="kycdetails_approve">
+            <p  id="msg_bind_kycdetails">...</p>
+            <button class="main_custom_btn navBtn Btnclick d-none"  data-section="home_secondsection"
+              id="kyc_document_upload_btn">Start</button>
+          </div>
+        </div>
+        <div class="card_iconsuccess mb-3 d-none" id="kyc_approve">
+          <img src="img/icon/success-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="card_iconsuccess mb-3 d-none" id="kyc_pending">
+          <img src="img/icon/unsucess-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+      </div>
+      <div class="flex_card text-center">
+        <div class="card_icon mb-3">
+          <img src="img/icon/pad-pen-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="card_contant_details">
+          <h6>Step 2</h6>
+          <h5>Agreement Signing</h5>
+         
+          <div class="d-none" id="agreement_signign_details_approve">
+            <p id="msg_bind_datetime">...</p>
+         
+            <button class="main_custom_btn navBtn Btnclick " data-section="agreement_signign_section"
+              id="agreement_signign_btn">Know More</button>
+          </div>
+          <!-- <button class="main_custom_btn navBtn Btnclick " data-section="agreement_signign_section" id="agreement_signign_btn">Know More</button> -->
+        </div>
+        <div class="card_iconsuccess mb-3 d-none" id="agreement_signign_approve">
+          <img src="img/icon/success-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <!-- <div class="card_iconsuccess mb-3 d-none" id="agreement_signign_pending">
+          <img src="img/icon/unsucess-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+        </div> -->
+      </div>
+      <div class="flex_card text-center">
+        <div class="card_icon mb-3">
+          <img src="img/icon/file-folder-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="card_contant_details">
+          <h6>Step 3</h6>
+          <h5>Registration</h5>
+          
+          <div class="d-none" id="registration_call_success">
+            <p id="msg_bind_datetime_registration_call">...</p>
+            <button class="main_custom_btn navBtn Btnclick " data-section="home_foursection" id="registration_btn">Click
+              for more info</button>
+          </div>
+        </div>
+        <div class="card_iconsuccess mb-3 d-none" id="registration_approve">
+          <img src="img/icon/success-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <!-- <div class="card_iconsuccess mb-3 d-none" id="registration_success_pending">
+          <img src="img/icon/unsucess-icon.png"loading="lazy" alt="File Icon" class="img-fluid">
+        </div> -->
+      </div>
+      <div class="flex_card text-center">
+        <div class="card_icon mb-3">
+          <img src="img/icon/file-folder-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="card_contant_details">
+          <h6>Step 4</h6>
+          <h5>Collect your Documents</h5>
+          <div class="d-none" id="collectdoc_success_yes">
+            <p id="msg_bind_collectdoc">...</p>
+            <!-- <button class="main_custom_btn navBtn Btnclick " data-section="home_fivesection"
+              id="collec_your_document_btn">Click for more info</button> -->
+              <button class="main_custom_btn navBtn mb-2" id="D_D_Collection">Download</button>
+              <small class="error-message my-2" id="errer_D_D_Collection" style="display: none;"></small>
+          </div>
+        </div>
+        <div class="card_iconsuccess mb-3 d-none" id="collec_your_document_success_yes">
+          <img src="img/icon/success-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+
+      </div>
+    </div>
+</div>
+
+  </section>
+
+
+  <section class="section home-page homesectiondiv " id="home_secondsection">
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png" loading="lazy" alt="File Icon" class="img-fluid backbtn backButton"
+        id="btnu_doc_viewiconsuccess">
+      <p class="firsthading">KYC Document Upload</p>
+    </div>
+    <div class="main-notification">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainsection_details" >
+      <div class="details_contant_card bg-primary" style="border-radius: 15px;">
+        <p class="mb-0 text-justify" id="pkycstatus"> &#x24D8; Please complete the KYC process
+        </p>
+        </div>
+      <div class="card_mainsection_contant_details">
+  
+        <div class="details_contant_card">
+          <!-- <span class="material-symbols-outlined me-2">info</span> -->
+    
+          <h6>
+            Applicant 1
+          </h6>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Name</h5>
+              <!-- Upload Button -->
+              <input type="text" id="customerkyc_text_name_applicant1" class="form-control custom_btn" disabled>
+
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Aadhaar card</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_adharcard">Upload</div>
+              <input type="file" id="customerkyc_file_adharcard_applicant1_Template29" class="file-input">
+              <small id="customer_lbl_adharcard_remark_applicant1" class=" pt-2"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Pan card</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_Pancard">Upload</div>
+              <input type="file" id="customerkyc_file_pan_applicant1_Template30" class="file-input">
+              <small id="customer_lbl_Pancard_remark_applicant1"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Photo</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_photo">Upload</div>
+              <input type="file" id="customerkyc_file_photo_applicant1_Template31" class="file-input">
+              <small id="customer_lbl_photo_remark_applicant1"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Loan Letter</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_loanletter">Upload</div>
+              <input type="file" id="customerkyc_file_loanletter_applicant1_Template32" class="file-input">
+              <small id="customer_lbl_loanletter_remark_applicant1"></small>
+            </div>
+          </div>
+        </div>
+
+        <!--  Add Applicant 2 add Details -->
+
+        <div class="details_contant_card d-none position-relative p-3 border" id="cpkycapplicant2">
+          <span id="closeBtn"> <img src="img/icon/add-icon.png" loading="lazy" alt="File Icon" class="img-fluid"></span>
+          <h6>
+            Applicant 2
+          </h6>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Name</h5>
+              <!-- Upload Button -->
+              <input type="text" id="customerkyc_text_name_applicant2" class="form-control custom_btn"
+                placeholder="name">
+                <small id="customer_lbl_name_remark_applicant2"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Aadhaar card</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_adharcard_applicant2">Upload</div>
+              <input type="file" id="customerkyc_file_adharcard_applicant2_Template29" class="file-input">
+              <small id="customer_lbl_adharcard_remark_applicant2"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Pan card</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_Pancard_applicant2">Upload</div>
+              <input type="file" id="customerkyc_file_pan_applicant2_Template30" class="file-input">
+              <small id="customer_lbl_Pancard_remark_applicant2"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Photo</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_photo_applicant2">Upload</div>
+              <input type="file" id="customerkyc_file_photo_applicant2_Template31" class="file-input">
+              <small id="customer_lbl_photo_remark_applicant2"></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="details_contant_card py-3 d-flex justify-content-between align-items-center" id="addapplicant2">
+          <h6 class="text-primary">
+            Add Applicant 2
+          </h6>
+          <img src="img/icon/add-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+
+        <!--  Add Applicant 3 add Details -->
+
+        <div class="details_contant_card d-none position-relative p-3 border" id="cpkycapplicant3">
+          <span id="closeBtn_applicant3"> <img src="img/icon/add-icon.png" loading="lazy" alt="File Icon"
+              class="img-fluid"></span>
+          <h6>
+            Applicant 3
+          </h6>
+
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Name</h5>
+              <!-- Upload Button -->
+              <input type="text" id="customerkyc_text_name_applicant3" class="form-control custom_btn"
+                placeholder="name">
+                <small id="customer_lbl_name_remark_applicant3"></small>
+            </div>
+          </div>
+
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Aadhaar card</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_adharcard_applicant3">Upload</div>
+              <input type="file" id="customerkyc_file_adharcard_applicant3_Template29" class="file-input">
+              <small id="customer_lbl_adharcard_remark_applicant3"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Pan card</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_Pancard_applicant3">Upload</div>
+              <input type="file" id="customerkyc_file_pan_applicant3_Template30" class="file-input">
+              <small id="customer_lbl_Pancard_remark_applicant3"></small>
+            </div>
+          </div>
+          <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/pad-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+            </div>
+            <div class="card_contant_details">
+              <h5>Photo</h5>
+              <p>Max size: 5MB (PDF, JPG, PNG)</p>
+              <!-- Upload Button -->
+              <div class="custom_btn" id="customer_lbl_photo_applicant3">Upload</div>
+              <input type="file" id="customerkyc_file_photo_applicant3_Template31" class="file-input">
+              <small id="customer_lbl_photo_remark_applicant3"></small>
+            </div>
+          </div>
+        </div>
+        <div class="details_contant_card py-3 d-none  justify-content-between align-items-center" id="addapplicant3">
+          <h6 class="text-primary">
+            Add Applicant 3
+          </h6>
+          <img src="img/icon/add-icon.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <section class="section home-page  homesectiondiv" id="agreement_signign_section">
+
+
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png" loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="backButtonvideo">
+      <p class="firsthading">Agreement Signing</p>
+
+    </div>
+
+
+    <div class="main-notification">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+
+    </div>
+  
+
+    <div class="mainsection_details">
+ 
+      <div class="card_mainsection_contant_details">
+        <div class="details_contant_card bg-primary"  style="border-radius: 15px;">
+          <p class="mb-0 text-justify"> &#x24D8; Please visit our head office to complete the agreement signing process.
+            To know more, please visit the website - <a href="https://knowhome.in/" target="_blank" class="knowhome"> KNOW HOME</a> 
+          </p>
+          </div>
+  
+        <div class="details_contant_card">
+
+          <div class="flex_card text-center">
+
+            <div class="card_contant_details">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              </p>
+              <button class="main_custom_btn navBtn " id="download_agreement">Download Agreement</button>
+              <small id="download_agreement_sub" class="error-message my-2" style="display: none;"></small>
+            </div>
+          </div>
+
+        </div>
+        <div class="details_contant_card">
+
+          <div class="flex_card text-center">
+            <div class="card_contant_details text-center">
+              <div class="videodiv mb-4" id="">
+                <button id="playButton">Play Video</button>
+                <iframe id="youtubeIframe"
+                  src="https://www.youtube.com/embed/G1yHASQ0Tdw?rel=0&modestbranding=1&controls=0&autoplay=0&enablejsapi=1"
+                  title="Rohan Saroha: Project Walkthrough" frameborder="0" allow="encrypted-media"
+                  referrerpolicy="strict-origin-when-cross-origin" sandbox="allow-scripts allow-same-origin"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore
+                et</p>
+              <div class="">
+                <p class="fw-bold"></p>
+              </div>
+              <div class=" mb-3">
+                <label class="form-label">Would you like to register along with this <span
+                    class="text-danger">*</span></label><br>
+                <div class="form-check form-check-inline clsvalid">
+                  <input class="form-check-input" type="radio" name="would_register" id="would_register_yes"
+                    value="Yes">
+                  <label class="form-check-label" for="would_register_yes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="would_register" id="would_register_no" value="No">
+                  <label class="form-check-label" for="would_register_no">No</label>
+                </div>
+                <input type="hidden" id="register_hdn_would_register" class="">
+                <div id="errorwould_register" class="form-text error-message error-message" style="display: none;">
+                  Select
+                  a Preferred Time Slot</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="details_contant_card p-0 bg-transparent ">
+        <button class="main_custom_btn navBtn " id="book_an_appointment_meeting">Book an Appointment</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section home-page  " id="home_foursection">
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png" loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading">Registration</p>
+    </div>
+    <div class="main-notification">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+    </div>
+    <div class="mainsection_details">
+      <div class="card_mainsection_contant_details">
+        <div class="details_contant_card bg-primary "  style="border-radius: 15px;">
+          <p class="mb-0 text-justify"> &#x24D8; our nearest registration center to complete the process
+          </p>
+          </div>
+        <div class="details_contant_card">
+         
+          <div class="linkregistration text-center">
+            <a href="" class="p-3 pb-5">Click here to view the guideline</a>
+          </div>
+          <div class="flex_card text-center">
+
+            <div class="card_icon mb-3">
+              <img src="img/icon/location-icon1.png" loading="lazy" alt="File Icon">
+            </div>
+            <div class="card_contant_details">
+              <h5>Nearest Registration Center</h5>
+              <p>123 Registration Street, City Center, State 12345</p>
+              <button class="custom_btn ">View on Map</button>
+            </div>
+          </div>
+<div class="" id="Due_AmountContainer">
+  <div class="flex_card text-center">
+    <div class="card_icon mb-3">
+      <img src="img/icon/cash-icon.png" loading="lazy" alt="File Icon">
+    </div>
+    <div class="card_contant_details ms-2">
+      <h5 class="Componentamount">Amount Due</h5>
+      <h3 class="fw-bold">₹ 20,000</h3>
+    </div>
+  </div>
+</div>
+          <!-- <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <img src="img/icon/car-icon.png"loading="lazy" alt="File Icon">
+            </div>
+            <div class="card_contant_details">
+              <h5>Arrange a Cab</h5>
+              <div class="homepage_car">
+                <div class="form-check form-check-inline me-2">
+                  <input class="form-check-input p-0" type="radio" name="homepage_car" id="caryes" value="yes">
+                  <label class="form-check-label" for="WhatsAppyes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input p-0" type="radio" name="homepage_car" id="carno" value="no">
+                  <label class="form-check-label" for="WhatsAppno">No</label>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <button class="main_custom_btn navBtn Btnclick" data-section="support_Schedule_a_Cal_firstsection"
+            id="request_for_appointmen_call">Request for Appointment</button>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+
+  <section class="section home-page  " id="home_fivesection">
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png" loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading">Document Collection</p>
+
+    </div>
+
+    <div class="main-notification">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="mainsection_details">
+
+      <div class="card_mainsection_contant_details">
+        <div class="details_contant_card bg-primary" style="border-radius: 15px;">
+          <p class="mb-0 text-justify"> &#x24D8; Please visit the office to collect the document.
+          </p>
+          </div>
+        <div class="details_contant_card">
+          <div class="flex_card text-center">
+            <div class="card_contant_details">
+              <h5>Download the scanned Copy of Document</h5>
+              <button class="main_custom_btn navBtn mb-2" id="D_D_Collection">Download</button>
+              <small class="error-message my-2" id="errer_D_D_Collection" style="display: none;"></small>
+            </div>
+          </div>
+          <!-- <div class="flex_card text-center">
+            <div class="card_icon mb-3">
+              <i class="material-symbols-outlined"> edit_calendar</i>
+             
+            </div>
+            <div class="card_contant_details">
+              <h5>CRM Contact Details</h5>
+              <h5 class="cpCRM_Mob_No ms-2">...</h5>
+         
+            </div>
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </section>
+
+
+  <section class="section support-page  " id="support_Schedule_a_Cal_firstsection">
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png" loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading">Schedule a Call</p>
+    </div>
+
+    <div class="main-notification">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mainsection_details">
+
+      <div class="card_mainsection_contant_details">
+        <div class="details_contant_card bg-primary" style="border-radius: 15px;">
+          <p class="errer_datemsg error-message " style="color: #fff !important;">
+            ...
+          </p>     
+
+          </div>
+
+        <div class="details_contant_card ">
+
+          <div class="flex_card text-center">
+              <div class="card_contant_details ">
+                <div class="d-flex">
+                
+                </div>
+
+                <div class="card_contant_details call_section_date">
+                  <div class="text-center">
+                    <label class="form-label would_registerslot ">Select your preferred date</label><br>
+                  </div>
+                  <div class="dates">
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                    <button class="btn btn-outline-primary date-btn"><span
+                        class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  </div>
+                  <div class="time-slot d-none">
+                    <label for="time" class="form-label">Preferred Time Slot</label>
+                    <select class="form-select" id="time">
+                      <option>9:00 AM - 10:00 AM</option>
+                      <option>10:00 AM - 11:00 AM</option>
+                      <option>11:00 AM - 12:00 PM</option>
+                      <option>1:00 PM - 2:00 PM</option>
+                      <option>2:00 PM - 3:00 PM</option>
+                      <option>3:00 PM - 4:00 PM</option>
+                      <option>4:00 PM - 5:00 PM</option>
+                    </select>
+                  </div>
+                  <div class="timeslot  py-3">
+
+                    <div class="text-center">
+                      <label class="form-label would_registerslot ">Preferred Time slot</label><br>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input p-0" type="radio" name="timeslotRadio" id="time_9_to_12"
+                        value="9 am to 12 pm">
+                      <label class="form-check-label" for="time_9_to_12">9 am to 12 pm</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input p-0" type="radio" name="timeslotRadio" id="time_2_to_5"
+                        value="2 pm to 5 pm">
+                      <label class="form-check-label" for="time_2_to_5">2 pm to 5 pm</label>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="error-message mb-2" id="appoinment_error_forcall" style="display: none;"></div>
+        
+          <button class="main_custom_btn navBtn call_section_date" id="selectdate_appointment_forcall">Book an
+            Appointment</button>
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section support-page " id="support_meetingsection">
+
+    <div class="backbtn_heading_header">
+      <img src="img/icon/back-white-icon.png" loading="lazy" alt="File Icon" class="img-fluid backbtn backButton" id="">
+      <p class="firsthading">Schedule a Meeting</p>
+
+    </div>
+
+    <div class="main-notification">
+      <div class="secondsection_notification justify-content-start callschedule">
+        <div>
+          <img src="img/icon/user-profile.png" loading="lazy" alt="File Icon" class="img-fluid">
+        </div>
+        <div class="ms-3">
+          <p><strong class="cpcrmname">Sarah Johnson</strong></p>
+
+          <p class="cpCRM_Mob_No">+91 99999 99999</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mainsection_details">
+ 
+      <div class="card_mainsection_contant_details ">
+        <div class="details_contant_card bg-primary" style="border-radius: 15px;">
+          <p class="errer_datemsg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore
+            et</p>
+          </div>
+        <div class="details_contant_card ">
+          <div class="flex_card text-center">
+            <div class="card_contant_details ">
+
+              <div class="card_contant_details call_section_date">
+                <div class="text-center">
+                  <label class="form-label would_registerslot ">Select your preferred date</label><br>
+                </div>
+                <div class="dates">
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                  <button class="btn btn-outline-primary date-btn"><span
+                      class="mb-2 spinner-border spinner-border-sm"></span></button>
+                </div>
+                <div class="timeslot  py-3">
+
+                  <div class="text-center">
+                    <label class="form-label would_registerslot ">Preferred Time slot</label><br>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input p-0" type="radio" name="timeslotRadio" id="time_lbl_9_to_12"
+                      value="9 am to 12 pm">
+                    <label class="form-check-label" for="time_lbl_9_to_12">9 am to 12 pm</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input p-0" type="radio" name="timeslotRadio" id="time_lbl_2_to_5"
+                      value="2 pm to 5 pm">
+                    <label class="form-check-label" for="time_lbl_2_to_5">2 pm to 5 pm</label>
+                  </div>
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="error-message mb-2" id="appoinment_error_forMeeting" style="display: none;"></div>
+          <button class="main_custom_btn navBtn call_section_date" id="selectdate_appointment">Book an
+            Appointment</button>
+           
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+
+
+
+  <!-- Offcanvas Menu -->
+  <div class="footer_menu">
+  </div>
+  <div id="offconvas_menu"></div>
+
+  <div class="modal_taxes" id="imagesifram">
+    <button class="close-btn" id="imagesiframclose">
+      <img src="img/icon/close-white-icon.png" loading="lazy" alt="Close Icon">
+    </button>
+  
+    <div class="pdf-container">
+      <iframe id="pdf_iframe" src=""></iframe>
+    </div>
+  </div>
+  
+  <script src="js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="https://misboard.rohanbuilders.com/jscss/cssvalidation.js " defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+<script>
+
+</script>
+
+</html>

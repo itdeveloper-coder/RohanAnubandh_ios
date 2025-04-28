@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Contacts , Camera Share image and Pdf in Cordova</title>
+    <script src="cordova.js" defer></script> <!-- Required for Cordova Plugins -->
+</head>
+<body>
+
+    <h2>Access Contacts, Camera Share image and Pdf</h2>
+
+    <!-- Fetch Contacts Button -->
+    <button onclick="getContacts()">Fetch Contacts</button>
+    <ul id="contactList"></ul>
+
+    <!-- Capture Image Button -->
+    <button onclick="openCamera()">Open Camera</button>
+    <br><br>
+    <img id="capturedImage" src="" style="max-width: 300px; display: none;" />
+
+    <br />
+    <button onclick="shareAPK()">Share Image</button><br /><br />
+    <button onclick="shareAPKPDF()">Share PDF</button><br /><br />
+
+    <button onclick="shownextpage()">Go To Next Page</button>
+
+
+    <script>
+        document.addEventListener("deviceready", function () {
+            console.log("✅ Device is ready!");
+            checkContactsPermission(); // Check permissions when app starts
+            alert("✅ Device is ready!");
+        }, false);
+
+        function checkContactsPermission() {
+            var permissions = cordova.plugins.permissions;
+            permissions.hasPermission(permissions.READ_CONTACTS, function (status) {
+                if (!status.hasPermission) {
+                    requestContactsPermission(); // Request if not granted
+                }
+            });
+        }
+
+        function requestContactsPermission(callback) {
+            var permissions = cordova.plugins.permissions;
+            permissions.requestPermissions(
+                [permissions.READ_CONTACTS], // Request multiple permissions
+                function (status) {
+                    if (status.hasPermission) {
+                        console.log("✅ Contact permission granted!");
+                        alert("✅ Contact permission granted!");
+                        if (callback) callback(); // Proceed to read contacts
+                    } else {
+                        alert("❌ Contact access permission is required!");
+                    }
+                },
+                function (error) {
+                    alert("❌ Error requesting contact permissions: " + JSON.stringify(error));
+                }
+            );
+        }
+
+        function getContacts() {
+            requestContactsPermission(function () {
+                var options = new ContactFindOptions();
+                options.multiple = true; // Fetch multiple contacts
+
+                navigator.contacts.find(
+                    ["displayName", "name", "phoneNumbers"], // Fields to retrieve
+                    function (contacts) {
+                        if (contacts.length === 0) {
+                            alert("No contacts found.");
+                        } else {
+                            console.log("✅ Contacts retrieved successfully!");
+                            displayContacts(contacts);
+                            alert("✅ Contacts retrieved successfully!");
+                        }
+                    },
+                    function (err) {
+                        console.error("❌ Error retrieving contacts:", JSON.stringify(err));
+                        alert("❌ Error fetching contacts: " + JSON.stringify(err));
+                    },
+                    options
+                );
+            });
+        }
+
+        function displayContacts(contacts) {
+            let list = document.getElementById("contactList");
+            list.innerHTML = ""; // Clear previous contacts
+
+            contacts.forEach(contact => {
+                if (contact.displayName && contact.phoneNumbers && contact.phoneNumbers.length > 0) {
+                    let li = document.createElement("li");
+                    li.textContent = `${contact.displayName}: ${contact.phoneNumbers[0].value}`;
+                    list.appendChild(li);
+                }
+            });
+        }
+
+        // Camera Functionality
+        function openCamera() {
+            navigator.camera.getPicture(
+                function (imageURI) {
+                    var imageElement = document.getElementById("capturedImage");
+                    imageElement.src = imageURI;
+                    imageElement.style.display = "block"; // Show image
+                    alert("✅ Picture captured successfully!");
+                },
+                function (error) {
+                    alert("❌ Failed to capture image: " + error);
+                },
+                {
+                    quality: 50, // Adjust image quality
+                    destinationType: Camera.DestinationType.FILE_URI,
+                    sourceType: Camera.PictureSourceType.CAMERA
+                }
+            );
+        }
+
+
+
+        function shareAPK() {
+            var imageUrl = "https://tinyjpg.com/images/social/website.jpg"; // Replace with your image URL
+
+            window.plugins.socialsharing.share(
+                "Hey! Check this out Image:",  // Message
+                "Image",                // Subject
+                imageUrl,                // Image URL instead of file path
+                null,                    // No extra URL
+                function () { // Success callback
+                    alert("Shared successfully! ✅");
+                },
+                function (error) { // Error callback
+                    alert("Failed to share! ❌\nError: " + error);
+                }
+            );
+        }
+
+        function shareAPKPDF() {
+            var pdfurl = "https://prathama.rohanbuilders.com/download/Viti-UnitPlans.pdf"; // Replace with your image URL
+
+            window.plugins.socialsharing.share(
+                "Hey! Check this out pdf:",  // Message
+                "Pdf",                // Subject
+                pdfurl,                // Image URL instead of file path
+                null,                    // No extra URL
+                function () { // Success callback
+                    alert("Shared successfully! ✅");
+                },
+                function (error) { // Error callback
+                    alert("Failed to share! ❌\nError: " + error);
+                }
+            );
+        }
+        function shownextpage() {
+            window.location.href = "Video.html";
+        }
+
+
+    </script>
+
+</body>
+</html>
